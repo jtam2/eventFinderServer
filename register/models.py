@@ -1,5 +1,6 @@
 from django.db import models
 from events.models import Events
+from datetime import datetime
 # Create your models here.
 class User(models.Model):
     email = models.CharField(unique=True, primary_key=True, max_length=200)
