@@ -1,0 +1,9 @@
+
+>>> import urllib.request
+>>> url = 'http://127.0.0.1:8000/register/'
+>>> values = {'s':'basic','submit':'search'}>>> data = urllib.parse.urlencode(values)
+>>> data=data.encode('utf-8')
+>>> req=urllib.request.Request(url,data)
+>>> req.method = 'POST'
+>>> resp=urllib.request.urlopen(req)
+>>> resp.read()

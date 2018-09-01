@@ -6,6 +6,7 @@ from register.models import User
 
 # Create your views here.
 def index(request):
-    user = User(userID='1',email='JacobTamUs@gmail.com',password='tam',date_joined=datetime.now())
+    user = User(email='JacobTamUs@gmail.com',password='tam',date_joined=datetime.now())
     user.save()
     return HttpResponse("SUCCESS")
+
