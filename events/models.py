@@ -7,7 +7,10 @@ class Events(models.Model):
     description = models.TextField(blank=True)
     date = models.DateField(null=True)
     time = models.CharField(blank=True, null=True, max_length=100)
-    title = models.CharField(max_length=200, null=True, unique=True)
+    title = models.TextField(null=True)
+    
+    class Meta:
+        unique_together = ('title', 'time', 'date')
 
 class EventTypes(models.Model):
     eventType = models.CharField(blank=True, null=True, max_length=50)

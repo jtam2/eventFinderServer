@@ -1,7 +1,6 @@
 from django.conf.urls import url
-from events import views
+from events.views import careerlaunch_scrap
 
 urlpatterns = [
-        url(r'^$', views.index, name='index'),
-        url(r'^careerlaunch$', views.careerLaunch, name='careerLaunch')
+        url(r'^careerlaunch$', careerlaunch_scrap.careerLaunch, name='careerLaunch')
     ]
